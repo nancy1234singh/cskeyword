@@ -377,12 +377,14 @@ sunbeam launch ubuntu --name test
 
 #Next step , is to make subnet , here we are making 4 subnet were 2 subnets are private with two different zones , and other two subnets are ublic subnets which are also , with two other different zones , we have to check also that one private and one public subnets has same zones .
 
-subnetscreation
+![image](https://github.com/user-attachments/assets/7e9f4c03-6a7f-4866-ace0-6fe10b5313d9)
+
 
 After createing the subnets , we have to create IGW (Internet Gatways), after creation we have to attach that to our VPC that we have created
-creating igw 
+![image](https://github.com/user-attachments/assets/c487821c-87ef-41fa-8f7c-c5bde70ed3a3)
 
-attach to vpc igw
+
+
 
 Then we have to create the VGW(Virtual Gateway), it has also be connect to our VPC .
 
