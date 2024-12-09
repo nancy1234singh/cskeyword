@@ -165,13 +165,19 @@ NOW GO TO GOOGLE AND ENTER THE IP ADDRESS YOU WILL SEE HII
 
 
 
+
 **USING DOCKER CONTAINER's IN VM ,TO ADD NGINX SEVER IN IT AND TYPING HI IN WEB SERVER**
 
 **1. First I login in my AWS account . Thne I created an instance .
+
 2. In instance I make some changes , where I edit in network setting , where I added SSH , HTTPS , HTTP, ALL TRAFFIC , ALL TCP , ALL UDP AND CREATED AN INSTANCE.
-3. Then I open puuty add the IP address from instance and add key pair file which I have downloaded when I creating instance.
-4. After that I click on open , then my ubuntu terminal was opended , where I logined by writting ubuntu.
-5. After that I have to install docker in my OS .
+   
+3.Then I open puuty add the IP address from instance and add key pair file which I have downloaded when I creating instance.
+   
+4.After that I click on open , then my ubuntu terminal was opended , where I logined by writting ubuntu.
+   
+5. After that I have to install docker in my OS 
+
 6. Then , I enter few command to install the docker
 7. COMMANDS ARE:**
 
@@ -246,8 +252,11 @@ STORAGE
 4. ALL TRAFFIC
    
 **2. AFTER THESE CHANGES YOU CAN LAUNCH THE INSTNACE**
+
 **3. AFTER THAT COPYING THE IP ADDRESS , ADD IT IN PUTTY AND ALSO SELECT THE KEY WHICH HAS BEEN CREATED IN PERIVOUS STEPS , THEN CLICK OPEN , AND YOUR VM IS AGAIN READY**
+
 **4. NOW WE HAVE TO INSTALL DOCKER**
+
 curl -sL https://github.com/ShubhamTatvamasi/docker-install/raw/master/docker-install.sh | bash
 **THIS COMMAND WILL HELP TO INSTALL DOCKER**
 sudo usermod -aG docker $USER
@@ -341,6 +350,7 @@ sunbeam launch ubuntu --name test
 
 **This command will launch our vm which we have created on openstack**
 
+
 **CREATING A VPC AND LOAD BALANCER TESTING**
 #First we have to go on to aws , then we have to go on to VPC (Virtual Private Cloud).
 
@@ -351,7 +361,6 @@ sunbeam launch ubuntu --name test
 subnetscreation
 
 After createing the subnets , we have to create IGW (Internet Gatways), after creation we have to attach that to our VPC that we have created
-
 creating igw 
 
 attach to vpc igw
@@ -403,6 +412,7 @@ editing health checks
 health steeing 2
 
 connecting the instances 
+
 
 After all the completeion we have tpo created the load balancer where , we have changes the setting .
 
