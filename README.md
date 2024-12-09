@@ -51,13 +51,13 @@ Converts high-level code into machine code. Interpreter: Executes code line by l
 **Open Source**
 Open source refers to software whose source code is made available to the public for anyone to view, use, modify, and distribute. This model promotes collaboration and transparency, allowing a community of developers and users to contribute to the software’s development and improvement.
 
-   
+**Closed source**   
 Closed source software, also known as proprietary software, is software whose source code is not made available to the public. Instead, the source code is kept secret by the software's developers or the company that owns it. Users are granted access to the software through licenses but do not have the ability to view, modify, or distribute the source code.
 
-VPN
+**VPN**
 Virtual Private Network, is a technology that creates a secure and encrypted connection over a less secure network, such as the internet. It allows users to send and receive data as if their devices were directly connected to a private network, enhancing security and privacy.
 
-DNS
+**DNS**
 Domain Name System, is a fundamental component of the internet that translates human-readable domain names into IP addresses that computers use to identify each other on the network. Without DNS, users would have to remember and enter numerical IP addresses to visit websites, rather than simple and memorable domain names like www.example.com.
 
 
