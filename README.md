@@ -264,9 +264,11 @@ curl -sL https://github.com/ShubhamTatvamasi/docker-install/raw/master/docker-in
 sudo usermod -aG docker $USER
 
 **THIS COMMAND WILL HEPL TO USE DOCKER FUNCTIONS**
+
 newgrp docker
 
 **THIS WILL CREATE A NEW GROUP IN OS**
+
 sudo snap install kubectl --classic
 
 **TO INSTALL kubectl IN DOCKER**
@@ -311,17 +313,26 @@ kubectl get deployment,pod,svc
 **Managing Minikube Addons**
 minikube addons list
 **TO SEE THE LIST OF ADDONS WHICH WE CAN ENABLE**
+
  minikube addons enable dashboard
+ 
 **ENABLING DASHBORAD**
+
 minikube addons enable ingress
+
 **ENABLING INGRESS**
+
 minikube dashboard --url
+
 **It will get the url and run the dashboard of MiniKube**
+
 kubectl proxy --address='0.0.0.0' --disable-filter=true &
 **It will convert the address for 8001 which we can access on our browser**
+
 http://server_ip:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default
 
 **Run the above command on you browser and in server_ip add you ip address provided by AWS**
+
 ![image](https://github.com/user-attachments/assets/52190968-203c-4d70-8fc7-1e4569be757f)
 
 
@@ -383,18 +394,26 @@ sunbeam launch ubuntu --name test
 After createing the subnets , we have to create IGW (Internet Gatways), after creation we have to attach that to our VPC that we have created
 ![image](https://github.com/user-attachments/assets/c487821c-87ef-41fa-8f7c-c5bde70ed3a3)
 
+![image](https://github.com/user-attachments/assets/d1de6843-a2e4-445b-91c6-367bf6604305)
 
 
 
 Then we have to create the VGW(Virtual Gateway), it has also be connect to our VPC .
+![image](https://github.com/user-attachments/assets/1becd45f-5d98-4027-8400-9c9298d5774b)
 
-attaching vgw wit the vpc
+![image](https://github.com/user-attachments/assets/49268eb7-5b8e-46e3-9bea-b9d0fe336518)
 
-creating vgw 
+
 
 After that we have to create the 2 Route table where one is for IGW and other is for VGW also we have to associte the public subnets with the IGW route table and private once with VGW route table .
 
 In the below images I have change some settings of rooute tables where I have connect them to my IGW & VGW , with some other port number .
+
+![image](https://github.com/user-attachments/assets/b2fbebb9-ce0d-42e0-9c5f-a682e22a0d22)
+![image](https://github.com/user-attachments/assets/6aeb9c50-5f8c-4136-82fd-fdd678a9b3d3)
+![image](https://github.com/user-attachments/assets/44955433-8323-4ca7-824e-53d28e81e452)
+![image](https://github.com/user-attachments/assets/90e440ca-f9fd-4ad7-a20b-889b99e3a94b)
+![image](https://github.com/user-attachments/assets/4ee27baa-4453-429e-8dd1-c24b2d762fe7)
 
 creating route tables
 
