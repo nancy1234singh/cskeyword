@@ -185,46 +185,72 @@ curl -sL https://github.com/ShubhamTatvamasi/docker-install/raw/master/docker-in
 newgrp docker
 
 **this command will help us to use docker**
+
 docker ps
+
 **provides a list of the Docker containers on your machine**
+
 docker --version
+
 **to check the version of docker which is installed**
+
 docker pull nginx
+
 **TO use nginx server in container**
+
 docker run --name docker-nginx -p 80:80 nginx
 
 **In a web browser, enter your server’s IP address to reveal Nginx’s default landing page**
 
 **ctrl + c #to stop the container from running**
 docker ps -a
+
 **The output reveals that the Docker container has exited**
 **DETACHED MODE**
+
 docker run --name docker-nginx -p 80:80 -d nginx
+
 **output is the container’s ID**
+
 docker ps
+
 **provoide new information about container**
+
 docker stop docker-nginx
+
 **to stop the container**
+
 docker rm docker-nginx
+
 **Building a Web Page to Serve on Nginx**
+
 mkdir -p ~/docker-nginx/html
+
 **Create a new directory for the website content within the home directory**
+
 cd ~/docker-nginx/html
+
 **Create an HTML file to serve on the server**
 ls
 cd html/
 ls
+
 **will show index.html file**
+
 sudo vi index.html
 i
+
 **help to insert in the web server**
+
 <html> hi </html>
 
 **write whatever you want to write I write only hi
 ctrl + c
 shift + ;
 wq**
+
 press {ENTER}
+
 docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
 
 **Linking the container to the VM**
@@ -275,9 +301,11 @@ sudo snap install kubectl --classic
 kubectl version --client
 
 **TO SEE THE VERISON OF kubectl**
+
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 
 **TO INSTALL MINIKUBE**
+
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 **TO INSTALL MINIKUBE IN LINUX DIRECTORY**
@@ -307,11 +335,17 @@ kubectl get pods
 **TO SEE HOW MANY PODS ARE PRESENT IN KUBECTL**
 
 **To deploy a sample nginx deployment, run following set of commands.**
+
 kubectl create deployment nginx-web --image=nginx
+
  kubectl expose deployment nginx-web --type NodePort --port=80
+ 
 kubectl get deployment,pod,svc
+
 **Managing Minikube Addons**
+
 minikube addons list
+
 **TO SEE THE LIST OF ADDONS WHICH WE CAN ENABLE**
 
  minikube addons enable dashboard
@@ -415,46 +449,20 @@ In the below images I have change some settings of rooute tables where I have co
 ![image](https://github.com/user-attachments/assets/90e440ca-f9fd-4ad7-a20b-889b99e3a94b)
 ![image](https://github.com/user-attachments/assets/4ee27baa-4453-429e-8dd1-c24b2d762fe7)
 
-creating route tables
-
-associating subnets to the route tables
-
-editing route table r1 
-
-in r1 ip
-
-for r2 
 
 After completion of that task , we have to make two EC2 instnaces which will help in our load balancer task, where we have changes the settings of EC2 instnaces these setting are done on both the instnaces .
 ![image](https://github.com/user-attachments/assets/64fab724-d53a-44a3-ae0a-b6bba069b99e)
 ![image](https://github.com/user-attachments/assets/51b6fc76-be48-4707-94a0-38d391137f8c)
 ![image](https://github.com/user-attachments/assets/40cba926-49f5-468b-8060-c2d1d1796340)
 
-changing settings in the ec2 unstance
-
-created the ec2 instances 
-
-adding a web server on the instance
 
 After the creation we have to add the web server on that , so I have enter the Apache2 server on the both the instances .
 
 Then we have to create the load balancer , and we have to create the target gr also where we have to connect our instnaces , alos we haveto edit the health check setting which are requied
 
-crreating a load balancer
 
-creataed the load balancer
 
-settinmgs of load 
 
-creating target grps
-
-security grp 
-
-editing health checks
-
-health steeing 2
-
-connecting the instances
 ![image](https://github.com/user-attachments/assets/81609a8f-c8a9-4f6a-b570-0c0a3e9b9b4e)
 
 
@@ -486,7 +494,10 @@ Then on one linux web server you have to enter some commands to check the load b
 seq 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 > /dev/null &
 
 htop
-final
+
+![image](https://github.com/user-attachments/assets/74dfa2e3-7cd8-4e60-8ae9-400b318c5a12)
+
+
 
 This will how you can see that how your load balancer is working
 
