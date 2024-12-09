@@ -144,19 +144,20 @@ ls
 index.html
 **------TO REMOVE SUDO-----------**
 sudo su
---------NOW SUDO IS REMOVED--------
--------REMOVE THE APACHE2 SERVER -----------
+**--------NOW SUDO IS REMOVED--------**
+**-------REMOVE THE APACHE2 SERVER ----------**-
 rm index.html
-------THEN ENTER--------
-vi index.html
+**------THEN ENTER--------**
+5i index.html
 i
-----------ENTER----------
+**----------ENTER----------**
 <html>  hi   </html>
-------NOW PRESS THESE KEY-------
-ctrl+c
+**------NOW PRESS THESE KEY-------**
+**ctrl+c
 shift+";"
-wq
+wq**
 -------PRESS ENTER -------
+
 NOW GO TO GOOGLE AND ENTER THE IP ADDRESS YOU WILL SEE HII
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -164,130 +165,140 @@ NOW GO TO GOOGLE AND ENTER THE IP ADDRESS YOU WILL SEE HII
 
 
 
-USING DOCKER CONTAINER's IN VM ,TO ADD NGINX SEVER IN IT AND TYPING HI IN WEB SERVER
-1. First I login in my AWS account . Thne I created an instance .
+**USING DOCKER CONTAINER's IN VM ,TO ADD NGINX SEVER IN IT AND TYPING HI IN WEB SERVER**
+
+**1. First I login in my AWS account . Thne I created an instance .
 2. In instance I make some changes , where I edit in network setting , where I added SSH , HTTPS , HTTP, ALL TRAFFIC , ALL TCP , ALL UDP AND CREATED AN INSTANCE.
 3. Then I open puuty add the IP address from instance and add key pair file which I have downloaded when I creating instance.
 4. After that I click on open , then my ubuntu terminal was opended , where I logined by writting ubuntu.
 5. After that I have to install docker in my OS .
 6. Then , I enter few command to install the docker
-7. COMMANDS ARE:
+7. COMMANDS ARE:**
+
 curl -sL https://github.com/ShubhamTatvamasi/docker-install/raw/master/docker-install.sh | bash
 newgrp docker
-this command will help us to use docker
+
+**this command will help us to use docker**
 docker ps
-provides a list of the Docker containers on your machine
+**provides a list of the Docker containers on your machine**
 docker --version
-to check the version of docker which is installed
+**to check the version of docker which is installed**
 docker pull nginx
-TO use nginx server in container
+**TO use nginx server in container**
 docker run --name docker-nginx -p 80:80 nginx
-In a web browser, enter your server’s IP address to reveal Nginx’s default landing page
-ctrl + c #to stop the container from running
+
+**In a web browser, enter your server’s IP address to reveal Nginx’s default landing page**
+
+**ctrl + c #to stop the container from running**
 docker ps -a
-The output reveals that the Docker container has exited
-DETACHED MODE
+**The output reveals that the Docker container has exited**
+**DETACHED MODE**
 docker run --name docker-nginx -p 80:80 -d nginx
-output is the container’s ID
+**output is the container’s ID**
 docker ps
-provoide new information about container
+**provoide new information about container**
 docker stop docker-nginx
-to stop the container
+**to stop the container**
 docker rm docker-nginx
-Building a Web Page to Serve on Nginx
+**Building a Web Page to Serve on Nginx**
 mkdir -p ~/docker-nginx/html
-Create a new directory for the website content within the home directory
+**Create a new directory for the website content within the home directory**
 cd ~/docker-nginx/html
-Create an HTML file to serve on the server
+**Create an HTML file to serve on the server**
 ls
 cd html/
 ls
-will show index.html file
+**will show index.html file**
 sudo vi index.html
 i
-help to insert in the web server
+**help to insert in the web server**
 <html> hi </html>
-write whatever you want to write I write only hi
+
+**write whatever you want to write I write only hi
 ctrl + c
 shift + ;
-wq
+wq**
 press {ENTER}
-
 docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
-Linking the container to the VM
-After running that command, enter the server’s IP address into the browser to view the new landing page
+
+**Linking the container to the VM**
+
+**After running that command, enter the server’s IP address into the browser to view the new landing page**
 
 
 
 
 
-INSTALLING MINIKUBE IN VM
-1. CREATE AN INSTANCE IN AWS AS , WITH OS OF UBUNTU OR WHAT YOU WANT THEN CHANGE SOME SETTINGS TO WORK LIKE TAKING
+**INSTALLING MINIKUBE IN VM**
+
+**1. CREATE AN INSTANCE IN AWS AS , WITH OS OF UBUNTU OR WHAT YOU WANT THEN CHANGE SOME SETTINGS TO WORK LIKE TAKING**
+
 Amozon Machine Image (AMI)
 Instance type
 t3.xlarge
 AND
 STORAGE
 30GB
-NETWORK SETTING YOU CAN INCLUDE
+**NETWORK SETTING YOU CAN INCLUDE**
 1. SSH
 2. HTTP
 3. HTTPS
 4. ALL TRAFFIC
-2. AFTER THESE CHANGES YOU CAN LAUNCH THE INSTNACE
-3. AFTER THAT COPYING THE IP ADDRESS , ADD IT IN PUTTY AND ALSO SELECT THE KEY WHICH HAS BEEN CREATED IN PERIVOUS STEPS , THEN CLICK OPEN , AND YOUR VM IS AGAIN READY
-4. NOW WE HAVE TO INSTALL DOCKER
+   
+**2. AFTER THESE CHANGES YOU CAN LAUNCH THE INSTNACE**
+**3. AFTER THAT COPYING THE IP ADDRESS , ADD IT IN PUTTY AND ALSO SELECT THE KEY WHICH HAS BEEN CREATED IN PERIVOUS STEPS , THEN CLICK OPEN , AND YOUR VM IS AGAIN READY**
+**4. NOW WE HAVE TO INSTALL DOCKER**
 curl -sL https://github.com/ShubhamTatvamasi/docker-install/raw/master/docker-install.sh | bash
-THIS COMMAND WILL HELP TO INSTALL DOCKER
+**THIS COMMAND WILL HELP TO INSTALL DOCKER**
 sudo usermod -aG docker $USER
-THIS COMMAND WILL HEPL TO USE DOCKER FUNCTIONS
+**THIS COMMAND WILL HEPL TO USE DOCKER FUNCTIONS**
 newgrp docker
-THIS WILL CREATE A NEW GROUP IN OS
+**THIS WILL CREATE A NEW GROUP IN OS**
 sudo snap install kubectl --classic
-TO INSTALL kubectl IN DOCKER
+**TO INSTALL kubectl IN DOCKER**
 kubectl version --client
-TO SEE THE VERISON OF kubectl
+**TO SEE THE VERISON OF kubectl**
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-TO INSTALL MINIKUBE
+**TO INSTALL MINIKUBE**
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
-TO INSTALL MINIKUBE IN LINUX DIRECTORY
+**TO INSTALL MINIKUBE IN LINUX DIRECTORY**
 minikube version
-TO CHECK THE VERISON
+**TO CHECK THE VERISON**
 minikube start --driver=docker
-TO START THE MINIKUBE ON VM
+**TO START THE MINIKUBE ON VM**
 minikube start --driver=docker --force
-IF YOU GET SOME ERROR TRY THIS COMMAND TO SOLVE IT
+**IF YOU GET SOME ERROR TRY THIS COMMAND TO SOLVE IT**
 minikube status
-TO CHECK THE STATUS OF MINIKUBE THAT IT IS RUNNING OR NOT
+**TO CHECK THE STATUS OF MINIKUBE THAT IT IS RUNNING OR NOT**
 kubectl cluster-info
-TO SEE THE CLUSTER INFORMATION
+**TO SEE THE CLUSTER INFORMATION**
 kubectl config view
-CONFIGURING THE KUBECTL
+**CONFIGURING THE KUBECTL**
 kubectl get nodes
-TO SEE HOW MANY NODES ARE PRESENT IN KUBECTL
+**TO SEE HOW MANY NODES ARE PRESENT IN KUBECTL**
 kubectl get pods
-TO SEE HOW MANY PODS ARE PRESENT IN KUBECTL
+**TO SEE HOW MANY PODS ARE PRESENT IN KUBECTL**
 
-To deploy a sample nginx deployment, run following set of commands.
+**To deploy a sample nginx deployment, run following set of commands.**
 kubectl create deployment nginx-web --image=nginx
  kubectl expose deployment nginx-web --type NodePort --port=80
 kubectl get deployment,pod,svc
-Managing Minikube Addons
+**Managing Minikube Addons**
 minikube addons list
-TO SEE THE LIST OF ADDONS WHICH WE CAN ENABLE
+**TO SEE THE LIST OF ADDONS WHICH WE CAN ENABLE**
  minikube addons enable dashboard
-ENABLING DASHBORAD
+**ENABLING DASHBORAD**
 minikube addons enable ingress
-ENABLING INGRESS
+**ENABLING INGRESS**
 minikube dashboard --url
-It will get the url and run the dashboard of MiniKube
+**It will get the url and run the dashboard of MiniKube**
 kubectl proxy --address='0.0.0.0' --disable-filter=true &
-It will convert the address for 8001 which we can access on our browser
+**It will convert the address for 8001 which we can access on our browser**
 http://server_ip:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default
-Run the above command on you browser and in server_ip add you ip address provided by AWS
-kube7
+**Run the above command on you browser and in server_ip add you ip address provided by AWS**
 
-Installing openstack on VM and creating a VM on it
+
+**Installing openstack on VM and creating a VM on it**
 1. CREATE AN INSTANCE IN AWS AS , WITH OS OF UBUNTU OR WHAT YOU WANT THEN CHANGE SOME SETTINGS TO WORK LIKE TAKING
 Amozon Machine Image (AMI)
 Instance type
@@ -295,14 +306,15 @@ t3.xlarge
 AND
 STORAGE
 50GB
-NETWORK SETTING YOU CAN INCLUDE
+**NETWORK SETTING YOU CAN INCLUDE**
 1. SSH
 2. HTTP
 3. HTTPS
 4. ALL TRAFFIC
+
 2. AFTER THESE CHANGES YOU CAN LAUNCH THE INSTNACE
 3. AFTER THAT COPYING THE IP ADDRESS , ADD IT IN PUTTY AND ALSO SELECT THE KEY WHICH HAS BEEN CREATED IN PERIVOUS STEPS , THEN CLICK OPEN , AND YOUR VM IS AGAIN READY
-Install the openstack snap
+**Install the openstack snap**
 sudo snap install openstack --channel 2024.1/beta
 
 **Prepare the machine**
