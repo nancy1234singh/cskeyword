@@ -411,7 +411,22 @@ editing health checks
 
 health steeing 2
 
-connecting the instances 
+connecting the instances
+![image](https://github.com/user-attachments/assets/81609a8f-c8a9-4f6a-b570-0c0a3e9b9b4e)
+
+
+![image](https://github.com/user-attachments/assets/c095b664-16be-4fcb-b001-fc0b4b12d031)
+
+
+![image](https://github.com/user-attachments/assets/e274bbe9-d827-470b-96b1-88ab6009aa4f)
+
+![image](https://github.com/user-attachments/assets/f2e43734-9a14-42a3-8deb-54124ef3d5ca)
+
+![image](https://github.com/user-attachments/assets/980997cf-de98-4915-81be-08a35cacfc28)
+
+![image](https://github.com/user-attachments/assets/a672fbd9-66f1-46a6-8745-145a7729a856)
+
+![image](https://github.com/user-attachments/assets/352d8787-7467-43f3-9ee0-73a6df3c992d)
 
 
 After all the completeion we have tpo created the load balancer where , we have changes the setting .
