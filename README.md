@@ -417,6 +417,7 @@ connecting the instances
 
 ![image](https://github.com/user-attachments/assets/c095b664-16be-4fcb-b001-fc0b4b12d031)
 
+![image](https://github.com/user-attachments/assets/36a0185f-2752-4332-90a7-3ceb48aa1886)
 
 ![image](https://github.com/user-attachments/assets/e274bbe9-d827-470b-96b1-88ab6009aa4f)
 
