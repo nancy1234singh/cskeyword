@@ -258,34 +258,50 @@ STORAGE
 **4. NOW WE HAVE TO INSTALL DOCKER**
 
 curl -sL https://github.com/ShubhamTatvamasi/docker-install/raw/master/docker-install.sh | bash
+
 **THIS COMMAND WILL HELP TO INSTALL DOCKER**
+
 sudo usermod -aG docker $USER
+
 **THIS COMMAND WILL HEPL TO USE DOCKER FUNCTIONS**
 newgrp docker
+
 **THIS WILL CREATE A NEW GROUP IN OS**
 sudo snap install kubectl --classic
+
 **TO INSTALL kubectl IN DOCKER**
 kubectl version --client
+
 **TO SEE THE VERISON OF kubectl**
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
 **TO INSTALL MINIKUBE**
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
 **TO INSTALL MINIKUBE IN LINUX DIRECTORY**
 minikube version
+
 **TO CHECK THE VERISON**
 minikube start --driver=docker
+
 **TO START THE MINIKUBE ON VM**
 minikube start --driver=docker --force
+
 **IF YOU GET SOME ERROR TRY THIS COMMAND TO SOLVE IT**
 minikube status
+
 **TO CHECK THE STATUS OF MINIKUBE THAT IT IS RUNNING OR NOT**
 kubectl cluster-info
+
 **TO SEE THE CLUSTER INFORMATION**
 kubectl config view
+
 **CONFIGURING THE KUBECTL**
 kubectl get nodes
+
 **TO SEE HOW MANY NODES ARE PRESENT IN KUBECTL**
 kubectl get pods
+
 **TO SEE HOW MANY PODS ARE PRESENT IN KUBECTL**
 
 **To deploy a sample nginx deployment, run following set of commands.**
@@ -304,7 +320,9 @@ minikube dashboard --url
 kubectl proxy --address='0.0.0.0' --disable-filter=true &
 **It will convert the address for 8001 which we can access on our browser**
 http://server_ip:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default
+
 **Run the above command on you browser and in server_ip add you ip address provided by AWS**
+![image](https://github.com/user-attachments/assets/52190968-203c-4d70-8fc7-1e4569be757f)
 
 
 **Installing openstack on VM and creating a VM on it**
@@ -349,6 +367,7 @@ sunbeam configure --accept-defaults --openrc demo-openrc
 sunbeam launch ubuntu --name test
 
 **This command will launch our vm which we have created on openstack**
+![image](https://github.com/user-attachments/assets/6c5bb5a4-6b7e-42cc-bbc3-b1566b51bb0e)
 
 
 **CREATING A VPC AND LOAD BALANCER TESTING**
