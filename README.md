@@ -426,6 +426,9 @@ in r1 ip
 for r2 
 
 After completion of that task , we have to make two EC2 instnaces which will help in our load balancer task, where we have changes the settings of EC2 instnaces these setting are done on both the instnaces .
+![image](https://github.com/user-attachments/assets/64fab724-d53a-44a3-ae0a-b6bba069b99e)
+![image](https://github.com/user-attachments/assets/51b6fc76-be48-4707-94a0-38d391137f8c)
+![image](https://github.com/user-attachments/assets/40cba926-49f5-468b-8060-c2d1d1796340)
 
 changing settings in the ec2 unstance
 
